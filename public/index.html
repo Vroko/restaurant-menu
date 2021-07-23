@@ -6,10 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cards List - Bulma Templates</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.8.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.8.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.8.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.8.0/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.8.0/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.8.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.8.0/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.8.0/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.8.0/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.8.0/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
     <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <link rel="stylesheet" href="../cards.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
@@ -60,7 +80,7 @@
             <h1 class="title" style="color: ghostwhite;">Bulma Card Layout Template</h1><br>
           </div>
         </div>
-        <div id="app" class="row columns is-multiline">
+        <div class="row columns is-multiline">
           <div v-for="card in cardData" key="card.id" class="column is-4">
             <div class="card large">
               <div class="card-image">
@@ -110,18 +130,7 @@
       </div>
     </footer>
 
-    <script src="../cardsData.js"></script>
-
-    <!-- Using Vue to populate cards to reduce redundant code -->
-    <script>
-      var app = new Vue({
-        el: '#app',
-        data: {
-          cardData: cardsData
-        }
-      })
-
-    </script>
+    <script src="js/viewItems.js"></script>
   </body>
 
 </html>
