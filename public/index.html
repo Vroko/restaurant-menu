@@ -68,8 +68,8 @@
             <h1 class="title" style="color: ghostwhite;">Bulma Card Layout Template</h1><br>
           </div>
         </div>
-        <div class="row columns is-multiline">
-          <div v-for="card in cardData" key="card.id" class="column is-4">
+        <div class="row columns is-multiline" id="menu">
+          <div v-for="card in cardData" key="" class="column is-4">
             <div class="card large">
               <div class="card-image">
                 <figure class="image is-16by9">
@@ -79,7 +79,7 @@
               <div class="card-content">
                 <div class="media">
                   <div class="media-content">
-                    <p class="title is-4 no-padding">Food's name</p>
+                    <p class="title is-4 no-padding">{{card.name}}</p>
                     <p>
                       <span class="title is-6">
                         <a href="#!">food's link </a> </span> </p>
@@ -113,6 +113,12 @@
     </footer>
 
     <script src="js/viewItems.js"></script>
+
+    <!-- Using Vue to populate cards to reduce redundant code -->
+    <script>
+      
+
+    </script>
   </body>
 
 </html>
