@@ -33,7 +33,7 @@
   </head>
 
   <body>
-
+    <div id="app">
     <!-- START NAV -->
     <nav class="navbar">
       <div class="container">
@@ -58,12 +58,12 @@
             <h1 class="title" style="color: ghostwhite;">Menu's Items</h1><br>
           </div>
         </div>
-        <div class="row columns is-multiline" id="menu">
+        <div class="row columns is-multiline" id="menu">            
           <div v-for="card in cardData" key="" class="column is-4">
             <div class="card large">
               <div class="card-image">
                 <figure class="image is-16by9">
-                  <img class="filled" src="https://bellyfull.net/wp-content/uploads/2019/03/Scrambled-Eggs-600x900-overlay-blog.jpg" alt="Food's image">
+                  <img class="filled" :src="card.imageURL" alt="Food's image">
                 </figure>
               </div>
               <div class="card-content">
@@ -72,11 +72,11 @@
                     <p class="title is-4 no-padding">{{card.name}}</p>
                     <p>
                       <span class="title is-6">
-                        <a href="#!">food's link </a> </span> </p>
+                        <a href="#!">{{card.link}}</a> </span> </p>
                   </div>
                 </div>
                 <div class="content">
-                  Food's description
+                  {{card.description}}
                   <div class="background-icon"><span class="icon-twitter"></span></div>
                 </div>
               </div>
@@ -108,6 +108,7 @@
       
 
     </script>
+    </div>
   </body>
 
 </html>

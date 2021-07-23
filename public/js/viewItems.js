@@ -2,13 +2,7 @@ let cardsData = "";
 
 document.addEventListener('DOMContentLoaded', () => {
     getItems();
-    var app = new Vue({
-        el: '#app',
-        data: {
-          cardData: cardsData
-        }
-      })
-    console.log(cardsData);
+    
 })
 
 const getItems = () => {
@@ -16,6 +10,14 @@ const getItems = () => {
     menuRef.on('value', (snapshot) => {
         const data = snapshot.val();
         cardsData = data;
+        
+        var app = new Vue({
+        el: '#app',
+        data: {
+            cardData: cardsData,
+          message: "hello"
+        }
+      })
     })
 }
 
