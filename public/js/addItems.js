@@ -20,7 +20,7 @@ const addItem = () => {
         firebase.database().ref('/menu').push({
             name: name,
             link: link,
-            imgURL: imgURL,
+            imageURL: imgURL,
             description: description
         })
         displayNotification('Your food has been successfully saved to our database', 'success')
