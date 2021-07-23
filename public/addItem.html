@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cards List - Bulma Templates</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.8.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.8.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.8.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.8.0/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.8.0/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.8.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.8.0/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.8.0/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.8.0/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.8.0/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cards.css">
+  </head>
+  <body>
+    <!-- START NAV -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <img src="https://cdn.emk.dev/templates/bulma-logo-light.png" alt="Logo">
+          </a>
+          <span class="navbar-burger burger" data-target="navbarMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenu" class="navbar-menu">
+          <div class="navbar-end">
+            <a href="index.html" class="navbar-item">
+              Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- END NAV -->    
+    <div class="container my-6">
+         <h1 class="title has-text-white has-text-centered my-6 py-6">Add Your Custom Menu Item Here!</h1>
+
+
+        <div class="field">
+            <label class="label has-text-white">Name</label>
+            <div class="control">
+                <input id="name" class="input" type="text" placeholder="Food's name">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label has-text-white">Link</label>
+            <div class="control has-icons-left has-icons-right">
+                <input id="link" class="input" type="text" placeholder="Food's link" value="">
+                <span class="icon is-small is-left">
+                <i class="fas fa-link"></i>
+                </span>
+                <!-- <span class="icon is-small is-right">
+                <i class="fas fa-check"></i>
+                </span> -->
+            </div>
+            <!-- <p class="help is-success">This username is available</p> -->
+        </div>
+
+        <div class="field">
+            <label class="label has-text-white">imgURL</label>
+            <div class="control has-icons-left has-icons-right">
+                <input id="img" class="input" type="text" placeholder="Image's Link" value="">
+                <span class="icon is-small is-left">
+                <i class="fas fa-link"></i>
+                </span>
+                <!-- <span class="icon is-small is-right">
+                <i class="fas fa-exclamation-triangle"></i>
+                </span> -->
+            </div>
+            <!-- <p class="help is-danger">This email is invalid</p> -->
+        </div>
+
+        <div class="field">
+            <label class="label has-text-white">Description</label>
+            <div class="control">
+                <textarea id="description" class="textarea" placeholder="Your food's description"></textarea>
+            </div>
+        </div>
+
+        <div class="field is-grouped">
+            <div class="control">
+                <button class="button is-link" onclick="addItem()">Submit</button>
+            </div>
+            <div class="control">
+                <a href="index.html" class="button is-link is-light">Cancel</a>
+            </div>
+            </div>
+        </div>
+
+    <div class="my-6"></div>
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <div class="soc">
+            <a href="#"><i class="fa fa-github-alt fa-lg" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-youtube fa-lg" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+          </div>
+          <p>
+            <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>.
+            The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. <br>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/addItems.js"></script>
+  </body>
+</html>
